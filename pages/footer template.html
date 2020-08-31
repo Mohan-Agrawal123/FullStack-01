@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>footer</title>
+    <style>
+          *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@media(min-width: 800px){
+.footer{
+         
+         position: relative;
+         top:100px;
+         background-color: #2f3640;
+         padding:5px 20px;
+         padding-top:40px;
+       
+     }
+.mycontent{
+      width: 100%;
+     
+     padding-bottom:20px;
+      border-bottom:2px solid rgba(255,255,255,0.1);
+  }
+      .mycontent .about{
+          float: left;
+        
+          width: 27%;
+          margin-right: 50px;
+         
+         
+      }
+      .mycontent  .about h2{
+color:white;
+text-transform: uppercase;
+margin-bottom: 30px;
+
+      }
+      .mycontent .about p{
+          text-align: justify;
+          color:white;
+          opacity:0.5;
+      }
+      .mycontent .link{
+          float: right;
+          width: 21%;
+          /* height: 200px; */
+      }
+      .mycontent .link p{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+      }
+      .mycontent .link ul{
+          list-style: none;
+      }
+      .mycontent .link ul li{
+          margin: 10px 5px;
+      }
+      .mycontent .link ul li a{
+          color: white; 
+          text-decoration: none;
+          opacity:0.5;
+       
+      }
+       .mycontent::after{
+          content: '';
+          clear: both;
+          display: block;
+      }
+      .regis{
+          width: 100%;
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .regis h1{
+          color: white;
+          margin-right: 20px;
+      }
+      .regis a{
+          color: white; 
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: 100px;
+          padding:5px;
+          background-color:  rgba(120, 76, 192, 0.747);
+          border-radius: 15px;
+        
+      }
+      .regis a:hover{
+          background-color: red;
+      }
+      .regis a:visited{
+          color:white;
+          background-color:palevioletred; 
+      }
+      .social{
+          width: 100%;
+          border-top:2px solid rgba(255,255,255,0.1);
+          margin-top:50px;
+          padding-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .social i{
+          color: white;
+          font-size: 20px;
+    }
+    .social .face{
+        margin:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: rgb(106, 106, 206);
+    }
+    .social .insta{
+        margin:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: purple;
+    }
+    .social .twit{
+        margin:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: skyblue;
+
+    }
+    .social .linked{
+        margin:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: blueviolet;
+    }
+    .social .gmail{
+        margin:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: red;
+    }
+
+    .social .insta:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .face:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .gmail:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .twit:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .linked:hover{
+        background-color:rgb(219, 186, 0)
+    }
+}
+@media (max-width: 799px){
+    .footer{
+         position: relative;
+         top:100px;
+         background-color: #2f3640;
+         padding:5px 20px;
+         padding-top:40px;
+         min-width: 450px;
+        
+     }
+.mycontent{
+      
+      width: 100%;
+      /* height: 440px; */
+      border-bottom:2px solid rgba(255,255,255,0.1);
+  }
+        .mycontent .about{
+            float: left;
+            /* height: 200px; */
+            padding-bottom: 30px;
+            width: 100%;
+        }
+        .mycontent  .about h2{
+            color:white;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+        }
+        .mycontent .about p{
+            color:white;
+            opacity: 0.5;
+        } 
+
+        .mycontent .link{
+          float: left;
+          width: 27%;
+          height: 200px;
+          margin-right: 10px;
+          margin-left: 10px;
+          /* border:1px solid orange; */
+      }
+      .mycontent .link p{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+      }
+      .mycontent .link ul{
+          list-style: none;
+      }
+      .mycontent .link ul li{
+          margin: 10px 5px;
+      }
+      .mycontent .link ul li a{
+          color: white; 
+          text-decoration: none;
+          opacity: 0.5;
+       
+      }
+       .mycontent::after{
+          content: '';
+          clear: both;
+          display: block;
+      }
+      .regis{
+         width: 100%;
+          margin-top: 50px;
+         
+      }
+      .regis h1{
+          text-align: center;
+          color: white;
+         
+      }
+      .regis a{
+          
+          display: block;
+          margin:auto;
+          margin-top: 20px;
+          text-align: center;
+          line-height: 26px;
+          color: white; 
+          text-decoration: none;
+          height: 30px;
+          width: 150px;
+          padding:5px;
+          background-color: rgba(120, 76, 192, 0.747);
+          border-radius: 15px;
+          font-size: 20px;
+        
+      }
+      .regis a:hover{
+          background-color: red;
+      }
+      .regis a:visited{
+          color:white;
+          background-color:palevioletred; 
+      }
+      .social{
+          width: 100%;
+          border-top:2px solid rgba(255,255,255,0.1);
+          margin-top:50px;
+          padding-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 40px;
+      }
+      .social i{
+          color: white;
+          font-size: 20px;
+    }
+    .social .face{
+        margin-right:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: rgb(106, 106, 206);
+    }
+    .social .insta{
+        margin-right:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: purple;
+    }
+    .social .twit{
+        margin-right:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: skyblue;
+
+    }
+    .social .linked{
+        margin-right:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: blueviolet;
+    }
+    .social .gmail{
+        margin-right:20px;
+        padding:15px;
+        border-radius: 100%;
+        background-color: red;
+    }
+
+    .social .insta:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .face:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .gmail:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .twit:hover{
+        background-color:rgb(219, 186, 0)
+    }
+    .social .linked:hover{
+        background-color:rgb(219, 186, 0)
+    }
+
+}
+
+      
+
+    </style>
+</head>
+<body>
+   <div class="footer">
+       <div class="mycontent">
+       <div class="about">
+           <h2>About Us</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ducimus veniam delectus commodi ea sapiente quos hic repudiandae, voluptates tempore molestias ex iste architecto soluta asperiores? Earum, iusto. Consequatur, distinctio doloremque. Nemo omnis ad, quis reprehenderit, quos accusamus animi minima, libero aliquid voluptates velit non laborum illo impedit alias quo?
+
+           </p>
+       </div>
+       <div class="link">
+           <p>Technologies</p>
+           <ul>
+               <li><a href="#">HTML</a></li>
+               <li><a href="#">CSS</a></li>
+               <li><a href="#">JAVASCRIPT</a></li>
+               <li><a href="#">BOOTSTRAP</a></li>
+               <li><a href="#">ANGULAR</a></li>
+           </ul>
+       </div>
+       <div class="link">
+           <p>Recent</p>
+        <ul>
+            <li><a href="practical-1.html" target="_blank">Practical-1</a></li>
+            <li><a href="practical-2.html" target="_blank">Practical-2</a></li>
+            <li><a href="practical-3.html" target="_blank">Practical-3</a></li>
+            <li><a href="practical-4.html" target="_blank">Practical-4</a></li>
+            <li><a href="practical-5.html" target="_blank">Practical-5</a></li>
+        </ul>
+       </div>
+       <div class="link">
+           <p>Favourites</p>
+        <ul>
+            <li><a href="practical-6.html" target="_blank">Practical-6</a></li>
+            <li><a href="practical-7.html" target="_blank">Practical-7</a></li>
+            <li><a href="practical-8.html" target="_blank">Practical-8</a></li>
+            <li><a href="practical-9.html" target="_blank">Practical-9</a></li>
+            <li><a href="practical-10.html" target="_blank">Practical-10</a></li>
+        </ul>
+       </div>
+       </div>
+       <div class="regis">
+           <h1>Register for free</h1>
+           <a href="#">SIGN UP!</a>
+       </div>
+       <div class="social">
+           <span class="face"><i class="fa fa-facebook"></i></span>
+           <span class="twit"><i class="fa fa-twitter"></i></span>
+           <span class="insta"><i class="fa fa-instagram"></i></span>
+           <span class="linked"><i class="fa fa-linkedin"></i></span>
+           <span class="gmail"><i class="fa fa-google-plus"></i></span>
+       </div>
+   </div> 
+</body>
+</html>
