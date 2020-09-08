@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tables</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(../images/banner.jpg);
+        }
+        table,tr,td,th{
+            transition: 0.6s;
+            opacity: 0.9;
+            /* border-spacing: 10px; */
+            border-collapse: collapse;
+            border-spacing: 0;
+            padding: 10px; 
+        }
+        table{
+            width: 80%;
+            margin: 40px auto;
+            background-color: white;
+            border-left :2px solid black;
+            border-right :2px solid black;
+        }
+        tbody tr:nth-child(odd)
+        {
+            background-color: lightgray;
+           
+        }
+        tbody tr:nth-child(even)
+        {
+            background-color: gray;
+           
+        }
+        tbody tr:last-child{
+            border-bottom: 2px solid rgba(0, 0, 0, 0.493);
+        }
+        thead tr{
+            background-color: whitesmoke;
+            border-bottom: 4px solid rgba(173, 158, 158, 0.5);
+            text-align: left;  
+        }
+        tbody tr:hover{
+            background-color: rgb(68, 65, 65);
+            color: white;
+        }
+        td,th{
+            text-align: left;
+            padding: 15px;
+        }
+        caption{
+            text-align:center;
+            padding: 12px 0 12px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:rgb(0, 77, 128);
+            color: whitesmoke;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(0, 47, 255);
+            font-size: 17px;   
+        }
+        a:hover{
+            color:lightcoral;   
+        }
+        .edit,.delete{
+            opacity: 0.8;
+            color: whitesmoke;
+        }
+        .edit:hover{
+            color:darkturquoise;
+        }
+        .delete:hover{
+            color:red;
+        }
+       
+
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption>
+            FullStack Live Practical Book
+        </caption>
+       <thead>
+        <tr>
+            <th width="25px">#</th>
+            <th width="50%">Practical Name</th>
+            <th>Link</th>
+            <th>Status</th>
+            <th>Tools</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Create a web page including HTML basic skeleton using Offline HTML Editor and Online sandbox enviroment.</td>
+            <td> <a href="practical-1.html" target="_blank">Practical-1</a></td>
+            <td style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Live your First Web-Page on Git-hub.</td>
+            <td><a href="practical-2.html" target="_blank">Practical-2</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Create a web page showing a basic html structure using character Entities and span tag.</td>
+            <td><a href="practical-3.html" target="_blank">Practical-3</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Create a website having list of all practical and their individual practical Page links.</td>
+            <td><a href="practical-4.html" target="_blank">Practical-4</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td><i class="material-icons edit">edit</i> 
+               <i class="material-icons delete">delete</i>
+            </td> 
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Create a web-page showing the use of Image-Map in the web Application.</td>       
+            <td><a href="practical-5.html" target="_blank">Practical-5</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Create a card layout using CSS layout properties.</td>
+            <td><a href="practical-6.html" target="_blank">Practical-6</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Create a Web page Layout using div Tags.</td>
+            <td><a href="practical-7.html" target="_blank">Practical-7</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Create a Web page having Fixed Navigation Bar with the given Content.</td>
+            <td><a href="practical-8.html" target="_blank">Practical-8</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+            <td><a href="practical-9.html" target="_blank">Practical-9</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Create a Responsive Side-Bar Navigation Menu.</td>
+            <td><a href="practical-10.html" target="_blank">Practical-10</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td><i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
