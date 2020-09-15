@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Practical-13</title>
+    <style>
+             *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    
+         background-color: rgb(49, 0, 139);
+}
+
+footer
+{ 
+         background-color: #2f3640;
+         /* background-color:rgba(48, 46, 46, 0.5); */
+         padding:5px 20px;
+         padding-top:40px;
+         opacity: 0.8;
+       
+     }
+
+
+     .registration a:hover{
+          background-color: red;
+      }
+      .registration a:visited{
+          color:white;
+          background-color: greenyellow;
+      }
+      .social{
+          width: 100%;
+          border-top:2px solid rgba(255,255,255,0.1);
+          margin-top:50px;
+          padding-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 40px;
+      }
+      .social i{
+          color: white;
+          font-size: 18px;
+    }
+    .social .fa-facebook{
+       
+        margin-right:20px;
+        padding:12px;
+        border-radius: 50%;
+        background-color: rgb(0, 89, 255);
+    }
+    .social .fa-instagram{
+        margin-right:20px;
+        padding:12px;
+        border-radius: 50%;
+        background-color: purple;
+    }
+    .social .fa-twitter{
+        margin-right:20px;
+        padding:12px;
+        border-radius: 50%;
+        background-color: rgb(14, 101, 136);
+
+    }
+    .social .fa-linkedin{
+        margin-right:20px;
+        padding:12px;
+        border-radius: 50%;
+        background-color: blueviolet;
+    }
+    .social .fa-google-plus{
+        margin-right:20px;
+        padding:12px;
+        border-radius: 50%;
+        background-color: rgb(189, 49, 30);
+       
+    }
+
+    .social .fa-instagram:hover{
+        background-color:rgb(219, 186, 0);
+    }
+    .social .fa-facebook:hover{
+        background-color:rgb(15, 0, 219);
+    }
+    .social .fa-google-plus:hover{
+        background-color:rgb(52, 241, 210);
+    }
+    .social .fa-twitter:hover{
+        background-color:rgb(100, 2, 119);
+    }
+    .social .fa-linkedin:hover{
+        background-color:rgb(0, 128, 100);
+    }
+    .fa{
+        margin-right: 10px;
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background-color: black;
+        color:rgba(255, 255, 255,0.5);
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
+    
+@media(min-width: 767px){
+
+    article
+{
+      width: 100%;
+      padding-bottom:20px;
+      border-bottom:2px solid rgba(255,255,255,0.1);
+  }
+      article .about
+      {
+          float: left;
+          width: 27%;
+          margin-right: 50px;
+   
+      }
+      article  .about h2{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+
+      }
+      article .about p{
+          text-align: justify;
+          color:white;
+          opacity:0.5;
+      }
+      article .link{
+          /* border:1px solid black; */
+          float: left;
+          width: 21%;
+       
+      }
+      article .link p{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+      }
+      article .link ul{
+          list-style: none;
+      }
+      article .link ul li{
+          margin: 10px 5px;
+          color: rgba(255, 255, 255,0.5); 
+         
+      
+      }
+      article .link ul li a{
+         
+         text-decoration: none;
+         color: rgba(255, 255, 255,0.5); 
+       
+      }
+      article::after{
+          content: '';
+          clear: both;
+          display: block;
+      }
+      .registration{
+          width: 100%;
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .registration h1{
+          color: white;
+          margin-right: 20px;
+      }
+      .registration a{
+          display: inline-block;
+          color: white; 
+          text-decoration: none;
+          height: 30px;
+          padding:5px 25px;
+          background-color: rgba(76, 113, 192, 0.747);
+          border-radius: 15px;
+        
+      }
+      
+    
+
+ 
+}
+@media (min-width: 499px ) and (max-width: 767px){
+
+    article
+{
+      width: 100%;
+      padding-bottom:20px;
+      border-bottom:2px solid rgba(255,255,255,0.1);
+  }
+  article .about{
+            float: left;
+           
+            padding-bottom: 30px;
+            width: 100%;
+        }
+        article  .about h2{
+            color:white;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+        }
+        article .about p{
+            color:white;
+            opacity: 0.5;
+        } 
+
+        article .link{
+          float: left;
+          width: 30%;
+         
+      }
+      article .link p{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+      }
+      article .link ul{
+          list-style: none;
+      }
+      article .link ul li{
+        
+          margin: 10px 5px;
+          color: rgba(255, 255, 255,0.5); 
+      }
+      article .link ul li a{
+         color: white; 
+         text-decoration: none;
+         opacity: 0.5;
+       
+      }
+      article::after{
+          content: '';
+          clear: both;
+          display: block;
+      }
+      .registration{
+         width: 100%;
+          margin-top: 50px;
+         
+      }
+      .registration h1{
+          text-align: center;
+          color: white;
+         
+      }
+      .registration a{
+          
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          color: white; 
+          text-decoration: none;
+          height: 30px;
+          padding:5px 25px;
+          background-color: rgba(76, 113, 192, 0.747);
+          border-radius: 15px;
+          margin-top: 20px;
+        
+      }
+    
+}
+ 
+ @media (max-width: 499px){
+    
+    footer{
+       min-width: 400px;  
+     }
+     article{
+      width: 100%;
+      
+      border-bottom: hidden;
+     }
+     article .about{
+            
+            
+            padding-bottom: 30px;
+            width: 100%;
+            border-bottom:2px solid rgba(255,255,255,0.1);
+            margin-bottom: 20px;
+        }
+        article  .about h2{
+            color:white;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+        }
+        article .about p{
+            color:white;
+            opacity: 0.5;
+        } 
+
+        article .link{
+          width: 100%;
+          padding-bottom: 20px;
+          border-bottom:2px solid rgba(255,255,255,0.1);
+          margin-bottom: 20px;
+         
+      }
+      article .link p{
+          color:white;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+      }
+      article .link ul{
+          list-style: none;
+      }
+      article .link ul li{
+        
+          margin: 10px 5px;
+          color: rgba(255, 255, 255,0.5); 
+      }
+      article .link ul li a{
+         color: white; 
+         text-decoration: none;
+         opacity: 0.5;
+       
+      }
+      .registration{
+         width: 100%;
+         margin-top: 30px;
+         
+      }
+      .registration h1{
+          text-align: center;
+          color: white;
+         
+      }
+      .registration a{
+          
+         display: block;
+         margin: 0 auto;
+         width: 100px;
+         color: white; 
+         text-decoration: none;
+         height: 30px;
+         padding:5px 25px;
+         background-color: rgba(76, 113, 192, 0.747);
+         border-radius: 15px;
+         margin-top: 20px;
+        
+      }
+     
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;margin: 50px 0px 10px 0px;"><span style="color: teal;">RESPONSIVE</span> <span style="color: tomato;">FOOTER</span> </h1>
+    <footer>
+        <article>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto alias 
+                quae consequatur, error voluptas esse rerum veritatis autem sint dolore. 
+                Fugiat sequi aliquam quae beatae expedita voluptas, velit, eveniet suscipit ipsa 
+                reiciendis rem exercitationem quaerat quod quidem aut accusamus, repellat repellendus 
+                ipsum modi ipsam esse! Ratione aut molestias molestiae.
+ 
+            </p>
+        </section>
+        <section class="link">
+            <p>CATEGORIES</p>
+            <ul>
+                <li><a href="#">C</a></li>
+                <li><a href="#">UI Design</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href=#>Java</a></li>
+                <li><a href=#>Android</a></li>
+                <li><a href=#>Hybrid Apps</a></li>
+            </ul>
+        </section>
+        <section class="link">
+            <p>QUICK LINKS</p>
+         <ul>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">Contribute</a></li>
+             <li><a href=#>Privacy Policy</a></li>
+             <li><a href=#>Sitemap</a></li>
+             <li><a href=#>Disclaimer</a></li>
+         </ul>
+        </section>
+        <section class="link">
+            <p>CONTACT US</p>
+         <ul>
+             <li><i class="fa fa-home" ></i>SCO-75, Chandigarh, India</li>
+             <li><i class="fa fa-envelope" ></i>mohanagr@gmail.com</li>
+             <li><i class="fa fa-phone" ></i>Mobile: 9890657823</li>
+             <li><i class="fa fa-google" ></i>Connect</li>
+         </ul>
+        </section>
+        </article>
+        <section class="registration">
+            <h1>Register For Free</h1>
+            <a href="#">Sign Up!</a>
+        </section>
+        <section class="social">
+            <span ><i class="fa fa-facebook"></i></span>
+            <span><i class="fa fa-twitter"></i></span>
+            <span ><i class="fa fa-instagram"></i></span>
+            <span ><i class="fa fa-linkedin"></i></span>
+            <span ><i class="fa fa-google-plus"></i></span>
+        </section>
+        <section class="copyright"> 
+            <span style="border-bottom: 2px solid rgb(211, 54, 54);"> Copyright &copy; 2020 All Rights Reserved by Google.</span>
+        </section>
+    </footer> 
+</body>
+</html>
