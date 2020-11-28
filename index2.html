@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Index file</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(255, 0, 140);
+        }
+        .container{
+            min-width: 300px;  
+        }
+        .fa-home{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .fa-tachometer{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .fa-university{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .fa-comments{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .fa-tasks{
+            margin-right: 15px;
+            font-size: 20px;
+        }
+@media (min-width: 800px){
+    @media(min-width: 799px) and (max-width: 1200px){
+        #nav h2{
+        display: none;
+    }
+    }
+    #container{
+        width:98%;
+        margin:0 auto;
+        padding: 10px;
+        margin-top: 80px;   
+    }
+    .container .head{
+        font-size: 40px;
+    }
+    #nav{
+        position: fixed;
+        top:0;
+        z-index: 5;
+        background-color: rgba(33, 150, 43, 0.5);
+        width: 100%;
+        height: 60px;
+        padding:0 20px 0px 20px;
+    }
+    #nav .menu{
+        float:right;
+    }
+    #nav ul li{
+        list-style: none;
+        display: inline-block;
+        line-height: 60px;
+    }
+    #nav ul li a{
+        text-decoration: none;
+        padding:10px 20px;
+        color: white;
+        transition:0.6s;
+    }
+    #nav h2{
+        font-size:40px;
+        line-height: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:lime;
+        text-align: center;
+    }
+    .show-btn, .hide-btn{
+        font-size: 30px;
+        color:white;
+        line-height: 70px;
+        transition: .4s;
+        display: none;
+    }
+    #chk{
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+    }
+    #nav ul li a:hover{
+        background-color:black;
+        border-radius:30px;
+    }
+}
+@media (min-width: 500px) and (max-width: 799px){
+    #nav{
+        position: fixed;
+        top:0;
+        z-index: 5;
+        padding:0 20px;
+        background-color: rgba(33, 150, 43, 0.5);
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+    }
+    .container .head{
+        font-size: 30px;   
+    }
+    #nav .menu{
+        float:right;
+    }
+    #nav ul li{
+        list-style: none;
+        display: inline-block;
+        line-height: 60px;
+    }
+    #nav ul li a{
+        text-decoration: none;
+        padding:5px 20px;
+        color: white;
+        transition:0.6s;
+    }
+    #nav h2{
+        font-size:40px;
+        line-height: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:crimson;
+        text-align: center;
+    }
+    .bar{         
+        height: 21px;
+        width: 30px;  
+        display: inline-block;
+    }
+    .bar .line{
+        height: 3px;
+        width: 30px;
+        margin-bottom: 4px;
+        background-color: orangered;
+    }
+    .times{
+        display: inline-block;
+        height: 27px;
+        width: 37px;
+        border:1px solid red;
+        position: relative;
+        left: 0;
+    }
+    .times .line1{
+        height: 3px;
+        width: 30px;
+        background-color: orangered;
+        display: inline-block;
+        transform: rotate(-45deg);
+        position: absolute;
+        left:2px;
+        top:50%;   
+    }
+    .times .line2{
+        height: 3px;
+        width: 30px;
+        background-color: orangered;
+        display: inline-block;
+        transform: rotate(45deg);
+        position: absolute;
+        left:2px;
+        top:50%;
+    }
+    .show-btn, .hide-btn{
+        font-size: 30px;
+        color:white;
+        line-height: 70px;
+        transition: .4s;
+        display: none;
+    }
+    .show-btn{
+        float: left;
+    }
+    #chk{
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+    }
+    .show-btn,.hide-btn{
+        display: block;
+    } 
+    .menu{
+        position: fixed;
+        top:0;
+        /* slide  */
+        left:-100%;
+        width: 50%;
+        height: 100vh;
+        background-color: black;
+        text-align: center;
+        padding:80px 0px;
+        transition: 0.7s;
+        line-height: normal;
+    }
+    #chk:checked ~ .menu{
+        left: 0;
+    }
+    #nav .menu ul li{
+        display: block;
+    }
+    #nav .menu ul li a{
+        display: block;     
+    }
+    .hide-btn{
+        position: absolute;
+        left: 20px;
+        top:10px;
+    }
+    #nav .menu ul li a:hover{
+        background-color:rgb(109, 95, 90); 
+        border-left:5px solid white;      
+    }
+}
+@media (max-width:499px) {
+    #nav{
+        position: fixed;
+        top:0;
+        z-index: 5;
+        padding:0 20px;
+        background-color: rgba(68, 33, 150,0.5);
+        height: 60px;
+        border-radius: 10px;
+        width: 100%;
+        min-width: 500px;
+    }
+    .container .head{
+        font-size: 25px;
+    }
+    .container{
+        min-width: 500px;
+    }
+    #nav .menu{
+        float:right;
+    }
+    #nav ul li{
+        list-style: none;
+        display: inline-block;
+        line-height: 60px;
+    }
+    #nav ul li a{
+        text-decoration: none;
+        padding:5px 20px;
+        color: white;
+        transition:0.6s;
+    }
+    #nav h2{
+        font-size:20px;
+        line-height: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:crimson;
+        text-align: center;
+    }
+    .bar{         
+        height: 21px;
+        width: 30px;    
+        display: inline-block;
+    }
+    .bar .line{
+        height: 3px;
+        width: 30px;
+        margin-bottom: 4px;
+        background-color: orangered;
+    }
+    .times{
+        display: inline-block;
+        height: 27px;
+        width: 37px;
+        border:1px solid red;
+        position: relative;
+        left: 0;
+    }
+    .times .line1{
+        height: 3px;
+        width: 30px;
+        background-color: orangered;
+        display: inline-block;
+        transform: rotate(-45deg);
+        position: absolute; 
+        left:2px;
+        top:50%;
+    }
+    .times .line2{
+        height: 3px;
+        width: 30px;
+        background-color: orangered;
+        display: inline-block;
+        transform: rotate(45deg);
+        position: absolute;
+        left:2px;
+        top:50%;
+    }
+    .show-btn, .hide-btn{
+        font-size: 30px;
+        color:white;
+        line-height: 70px;
+        transition: .4s;
+        display: none;
+    }
+    .show-btn{
+        float: left;
+    }
+    #chk{
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+    }
+    .show-btn,.hide-btn{
+        display: block;
+    } 
+    .menu{
+        position: fixed;
+        top:0;
+        /* slide  */
+        left:-100%;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        text-align: center;
+        padding:80px 0px;
+        transition: 0.7s;
+        line-height: normal;
+    }
+    #chk:checked ~ .menu{
+        left: 0;
+    }
+    #nav .menu ul li{
+        display: block;
+    }
+    #nav .menu ul li a{
+        display: block; 
+    }
+    .hide-btn{
+        position: absolute;
+        left: 20px;
+        top:10px;
+    }
+    #nav .menu ul li a:hover{
+        background-color:rgb(109, 95, 90); 
+        border-left:5px solid white;   
+    }
+}
+table,tr,td,th{
+        transition: 0.6s;
+        opacity: 0.9;
+        border-collapse: collapse;
+        border-spacing: 0;
+        padding: 10px; 
+}      
+        table{
+            width: 80%;
+            margin: 40px auto;
+            background-color: white;
+            border-left :2px solid black;
+            border-right :2px solid black;
+           
+            
+        }
+       tbody tr:nth-child(odd)
+        {
+            background-color: lightgray;
+           
+        }
+       tbody tr:nth-child(even)
+        {
+            background-color: gray;
+           
+        }
+       tbody tr:last-child{
+            border-bottom: 2px solid rgba(0, 0, 0, 0.493);
+        }
+        
+       thead tr{
+            background-color: whitesmoke;
+            border-bottom: 4px solid rgba(173, 158, 158, 0.5);
+            text-align: left;  
+        }
+       tbody tr:hover{
+            background-color: rgb(68, 65, 65);
+            color: white;
+        }
+        td,th{
+            text-align: left;
+            padding: 15px;
+        }
+        caption{
+            text-align:center;
+            padding: 12px 0 12px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 77, 128);
+            color: whitesmoke;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(0, 47, 255);
+            font-size: 17px;   
+        }
+        a:hover{
+            color:lightcoral;   
+        }
+        .edit,.delete{
+            opacity: 0.8;
+            color: whitesmoke;
+        }
+        .edit:hover{
+            color: darkturquoise;
+        }
+        .delete:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <div class="bar">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+      
+    </label>
+    <div class="menu">
+        <ul >
+        <li><a href="#HOME"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+       <li><a href="#TEAM"><i class="fa fa-university" aria-hidden="true"></i>TEAM</a></li>
+       <li> <a href="#TECHNOLOGY"><i class="fa fa-tachometer" aria-hidden="true"></i>TECHNOLOGIES</a></li>
+        <li><a href="#ABOUT"><i class="fa fa-tasks" aria-hidden="true"></i>ABOUT US</a></li>
+        <li><a href="#CONTACT"><i class="fa fa-comments" aria-hidden="true"></i>CONTACT</a></li>
+        <label for="chk" class="hide-btn">
+            <!-- <i class="fa fa-times" ></i> -->
+            <div class="times">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+            <!-- <img src="../images/avatar1.png" width="30px" height="30px" alt=""> -->
+        </label>
+        </ul>
+               </div>
+              <h2>Web Development</h2>
+    </div>
+    <div class="container">
+    <p style="color:orange ;margin-top:80px; text-align: center;margin-bottom: 30px;" class="head">Welcome to Fullstack Course</p>
+    <h2 style="color:blueviolet;margin:20px 20px;">About Course</h2>
+    <p style="text-align: justify;margin:20px 20px;">
+        Front-end web development is everything involved in programming the user interface of a web application.
+        Typically it refers to the Hypertext Markup Language(HTML),Cascading Style Sheets(CSS) and JavaScript portion
+        of a web site productuion as opposed to the data base or server-side programming.It encompasses everything from building
+        a simple page of HTML text to creating complex,response HTML5 website design to be accessed via various different browsers,
+        devices and screeen sizes.
+    </p>
+    <h1 style="color:green;margin:20px 20px;">List of Practicals</h1>
+    <table>
+        <caption>
+            FullStack Live Practical Book
+        </caption>
+       <thead>
+        <tr>
+            <th width="25px">#</th>
+            <th width="50%">Practical Name</th>
+            <th>Link</th>
+            <th>Status</th>
+            <th>Tools</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Create a web page including HTML basic skeleton using Offline HTML Editor and Online sandbox enviroment.</td>
+            <td> <a href="pages/practical-1.html" target="_blank">Practical-1</a></td>
+            <td style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Live your First Web-Page on Git-hub.</td>
+            <td><a href="pages/practical-2.html" target="_blank">Practical-2</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Create a web page showing a basic html structure using character Entities and span tag.</td>
+            <td><a href="pages/practical-3.html" target="_blank">Practical-3</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Create a website having list of all practical and their individual practical Page links.</td>
+            <td><a href="pages/practical-4.html" target="_blank">Practical-4</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td> 
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Create a web-page showing the use of Image-Map in the web Application.</td>       
+            <td><a href="pages/practical-5.html" target="_blank">Practical-5</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Create a card layout using CSS layout properties.</td>
+            <td><a href="pages/practical-6.html" target="_blank">Practical-6</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td> 
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Create a Web page Layout using div Tags.</td>
+            <td><a href="pages/practical-7.html" target="_blank">Practical-7</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Create a Web page having Fixed Navigation Bar with the given Content.</td>
+            <td><a href="pages/practical-8.html" target="_blank">Practical-8</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+            <td><a href="pages/practical-9.html" target="_blank">Practical-9</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Create a Responsive Side-Bar Navigation Menu.</td>
+            <td><a href="pages/practical-10.html" target="_blank">Practical-10</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+            <td>11.</td>
+            <td>Create a Table that represent Live Practical Book Records.</td>
+            <td><a href="pages/practical-11.html" target="_blank">Practical-11</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>Create a Custom Price Table Template.</td>
+            <td><a href="pages/practical-12.html" target="_blank">Practical-12</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>13.</td>
+            <td>Create a Responsive Footer Template.</td>
+            <td><a href="pages/practical-13.html" target="_blank">Practical-13</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>14.</td>
+            <td>Create Login form with different Templates.</td>
+            <td><a href="pages/practical-14.html" target="_blank">Practical-14</a></td>
+            <td  style="color:rgb(81, 255, 0)">Checked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>15.</td>
+            <td>Create a Counter Page using JavaScript as per the attached Templates.</td>
+            <td><a href="pages/practical-15.html" target="_blank">Practical-15</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>16.</td>
+            <td>Create a To-Do list using javascript.</td>
+            <td><a href="pages/practical-16.html">Practical-16</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        <tr>
+            <td>17.</td>
+            <td>Create a Page with Live Clock with Dynamic Greeting Background and Data Stored in Browser Local Storage.</td>
+            <td><a href="pages/practical-17.html">Practical-17</a></td>
+            <td  style="color:rgb(255, 255, 0)">Unchecked</td>
+            <td>
+                <i class="material-icons edit">edit</i> 
+                <i class="material-icons delete">delete</i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>  
+</body>
+</html>
